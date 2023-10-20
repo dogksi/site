@@ -1,0 +1,240 @@
+
+@font-face {
+    font-family: 'MapoGoldenPier';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/MapoGoldenPierA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GangwonEduSaeeum_OTFMediumA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduSaeeum_OTFMediumA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'omyu_pretty';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/omyu_pretty.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    color: rgb(87, 81, 81);
+}
+
+#container {
+    margin: 0 auto; /* 화면 중앙에 배치 */
+    width: 100%;
+    /* position: relative; */
+}
+
+/* 헤더 영역 */
+header {
+    width: 100%;
+    height: 302px;
+    margin: auto;
+}
+
+/************************************/
+/* 네비게이션 영역 - 로고와 탑메뉴 */
+/************************************/
+
+nav {
+    width: 100%;
+    /* height: 222px; */
+    padding: 40px 0;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+}
+
+/* 로고 영역 */
+#logo{
+    margin: 0 auto;
+    width: 370px;
+    height: 124px;
+    color: black;
+    font-size: 80px;
+    text-align: center;
+    font-weight: 800;
+    font-family: 'MapoGoldenPier','Courier New', Courier, monospace;
+}
+#alogo{
+    color: black;
+}
+/* 탑메뉴 영역 */
+#topMenu {
+    margin: auto;
+    margin-top: 32px;
+    margin-bottom: 27px;
+    width: 350px;
+    height: 26px;
+    display: flex;
+    justify-content: space-around;
+}
+.topMenuClass{
+    border-right: 1px solid black;
+    padding-right: 25px;
+    margin-left: 30px;
+    font-weight: 800;
+    color: rgb(87, 81, 81);
+}
+#about{
+    border-right: none;
+}
+#topMenu a:visited{
+    font-weight: 800;
+    color: rgb(87, 81, 81);
+}
+#topMenu a:hover {
+    color: rgb(141, 189, 228);
+    padding: 0;
+}
+
+/************************************/
+/* 섹션 영역 - 헤더와 호라이즌      */
+/************************************/
+
+/* 섹션 */
+.sectionWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.section {
+    width: 100%;
+    min-height: 20px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-sizing: border-box;
+    padding: 7vh 7vw;
+}
+
+/* 섹션 헤더 */
+.headerWrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.lookHeader{
+    margin-bottom: 0.7em;
+    max-width: 1200px;
+    text-align: center;
+    font-size: 1.7em;
+    align-self: flex-start;
+}
+.longText{
+    width: 100%;
+    margin-bottom: 1.1em;
+    text-align: left;
+    text-transform: none;
+    font-size: 0.77em;
+    font-weight: lighter;
+    line-height: 1.8em;
+}
+div {
+    display: block;
+}
+/* 섹션 호라이즌 */
+.horizontal{
+    position: relative;
+}
+.arrowContainer{
+    height: 100%;
+    width: 10%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    cursor: pointer;
+    z-index: 3;
+}
+.arrowContainer:hover {
+    opacity: 1;
+}
+.Gallery {
+    margin-top: 4em;
+    margin-bottom: 0em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    overflow-y: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    min-height: 100px;
+    position: relative;
+    min-width: 100px;
+}
+figure {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 40px;
+    margin-inline-end: 40px;
+    position: relative;
+    flex-shrink: 0;
+    max-width: none;
+}
+.fade-in {
+    animation-fill-mode: backwards;
+    animation-duration: 1.8s;
+    animation-timing-function: ease-out;
+}
+.Item {
+    margin-right: 2vw;
+    position: relative;
+    flex-shrink: 0;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    margin-right: 2vw;
+}
+.imgWrapper {
+    display: block;
+    overflow: hidden;
+    position: relative;
+}
+img {
+    height: 70vh;
+    display: block;
+    width: auto;
+    aspect-ratio: auto 2433/ 3637;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+
+@media only screen and (max-width: 999px) {
+    .sectionWrapper section{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .arrowContainer{
+        display: none;
+    }
+    .Gallery {
+        display: block;
+    }
+    .Gallery figure {
+        margin-right: 0!important;
+        max-width: 100%;
+        margin-bottom: 2em;
+    }
+    img {
+        width: 100%;
+        height: auto!important;
+    }
+    .lookHeader {
+        font-size: 1.06em!important;
+        line-height: 1.05em!important;
+        text-align: left!important;
+        align-self: flex-start!important;
+    }
+}
